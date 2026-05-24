@@ -144,7 +144,7 @@ body {
     padding: 300px 300px;
     box-shadow: 0px 0px 45px 10px white;
     border-radius: 800px;
-    transform: translate(-98px, -200px);
+    transform: translate(-98px, -190px);
     z-index: -1;
 }
 @keyframes boxShadowAnim {
