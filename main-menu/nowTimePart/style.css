@@ -12,9 +12,10 @@ body {
     background-attachment: fixed;
 
     /* Animatsiyani bitta qatorda yozamiz */
-    /* animation: neonFlow 15s ease infinite; */ 
+    /* animation: neonFlow 15s ease infinite; */
 }
-.bodyForAnimation{
+
+.bodyForAnimation {
     position: fixed;
     /* right: 0;
     bottom: 0; */
@@ -25,10 +26,13 @@ body {
     width: auto;
     filter: blur(12px);
     height: auto;
-    z-index: -100; /* Videoni barcha elementlardan orqaga o'tkazadi */
-    object-fit: cover; /* Videoni cho'zib yubormasdan, fonga chiroyli moslaydi */
+    z-index: -100;
+    /* Videoni barcha elementlardan orqaga o'tkazadi */
+    object-fit: cover;
+    /* Videoni cho'zib yubormasdan, fonga chiroyli moslaydi */
     background-size: cover;
 }
+
 .soat {
     display: flex;
     opacity: 0;
@@ -68,10 +72,13 @@ body {
     font-family: 'Courier New', Courier, monospace;
     font-style: italic;
     font-weight: 800;
+    display: none;
+    color: white;
+    top: 50%;
+    left: 50%;
     color: white;
     position: absolute;
-    transform: translateY(50%);
-    margin-right: 25px;
+    transform: translateY(455px, -255px);
     transition: 0.52s;
 }
 
@@ -147,18 +154,19 @@ body {
     transform: translate(-98px, -190px);
     z-index: -1;
 }
-@keyframes boxShadowAnim {
-    10%{
 
-    }
+@keyframes boxShadowAnim {
+    10% {}
 }
-.animationDum{
+
+.animationDum {
     position: absolute;
     width: 600px;
     opacity: 0;
     /* display: none; */
     transition: 1.85s;
 }
+
 .FullScreenbtn {
     background: none;
     border: grey solid 1px;
@@ -205,7 +213,70 @@ body {
     box-shadow: 0px 0px 15px 2px white;
 }
 
+.bodyMediaFor {
+    /* display: none; */
+}
+
 .buttonsDad {
     display: flex;
     gap: 25px;
+}
+
+@media (max-width: 391px) {
+    .animationDum {
+        box-shadow: 0px 0px 15px 5px white;
+        width: 222px;
+    }
+
+    .soat::before {
+        display: none;
+    }
+
+    .bodyForAnimation {
+        display: none;
+    }
+
+    .friendTimes {
+        font-size: 18px;
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    .friendNums {
+        font-size: 11px;
+    }
+
+    .my-logo {
+        font-size: 14px;
+        animation: none;
+        top: 5px;
+        right: 10px;
+    }
+
+    .buttonsDad {
+        position: absolute;
+        top: 480px;
+        align-items: center;
+    }
+    .buttonsDad>button, .buttonsDad>a>button{
+        font-size: 10px;
+    }
+
+    .bodyMediaFor {
+        position: fixed;
+        /* right: 0;
+    bottom: 0; */
+        min-width: 100%;
+        min-height: 100%;
+        margin: 0;
+        filter: blur(5px);
+        width: auto;
+        filter: blur(12px);
+        height: auto;
+        z-index: -100;
+        /* Videoni barcha elementlardan orqaga o'tkazadi */
+        object-fit: cover;
+        /* Videoni cho'zib yubormasdan, fonga chiroyli moslaydi */
+        background-size: cover;
+    }
 }

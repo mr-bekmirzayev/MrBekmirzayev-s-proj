@@ -12,6 +12,7 @@ let year = document.querySelector(".year");
 let month = document.querySelector(".month");
 let animationDum = document.querySelector(".animationDum");
 let day = document.querySelector(".day");
+let xabarMatni = document.querySelector('.xabarMatni')
 let milliSecond = document.querySelector(".milSec");
 window.onload = async function () {
   let textl = document.createElement("h3");
@@ -74,8 +75,5 @@ function soatY() {
   year.textContent = yr;
   month.textContent = mth + ".";
   day.textContent = dy + ".";
-  let joriyOyIndex = data.getMonth(); 
-  
-  monthText.textContent = oylar[joriyOyIndex];
-  
+  let joriyOyIndex = data.getMonth();   
 }
