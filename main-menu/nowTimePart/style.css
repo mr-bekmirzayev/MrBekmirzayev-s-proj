@@ -208,6 +208,10 @@ body {
     /* display: none; */
 }
 
+.bodyMediaFor{
+    display: none;
+}
+
 .buttonsDad {
     display: flex;
     gap: 25px;
