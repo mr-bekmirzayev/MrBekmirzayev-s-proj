@@ -6,12 +6,8 @@ let sideInf = document.querySelector(".inf")
 let SideProfile = document.querySelector(".SideProfile");
 let SideSettings = document.querySelector(".SideSettings");
 let SideNowTime = document.querySelector(".SideNowTime");
-
-window.addEventListener('scroll'){
-    console.log('surdingiz a?')
-}
 SideNowTime.addEventListener('click', function() {
-    window.location.href = "/main-menu/nowTimePart/index.html";
+    window.location.href = "nowTimePart/index.html";
 })
 const ismi = localStorage.getItem('userName') || 'mehmon'
 const familiyasi = localStorage.getItem('userLastName') ||  'mehmon'
