@@ -3,12 +3,14 @@ let loadingVideo = document.querySelector(".loadingVid");
 let hour = document.querySelector(".hour");
 let minute = document.querySelector(".minute");
 let secund = document.querySelector(".secund");
+let monthText = document.querySelector(".monthText");
 let FullScreenbtn = document.querySelector(".FullScreenbtn");
 let soatE = document.querySelector(".soat");
 const networks = document.querySelector(".networks");
 const myLogo = document.querySelector(".my-logo");
 let year = document.querySelector(".year");
 let month = document.querySelector(".month");
+let animationDum = document.querySelector(".animationDum");
 let day = document.querySelector(".day");
 let milliSecond = document.querySelector(".milSec");
 window.onload = async function () {
@@ -30,6 +32,7 @@ window.onload = async function () {
   networks.style.opacity = "1";
   FullScreenbtn.style.opacity = "1";
   soatE.style.opacity = "1";
+  animationDum.style.opacity = "1";
   setInterval(soatY, 20);
   soatY();
 };
@@ -71,4 +74,8 @@ function soatY() {
   year.textContent = yr;
   month.textContent = mth + ".";
   day.textContent = dy + ".";
+  let joriyOyIndex = data.getMonth(); 
+  
+  monthText.textContent = oylar[joriyOyIndex];
+  
 }
