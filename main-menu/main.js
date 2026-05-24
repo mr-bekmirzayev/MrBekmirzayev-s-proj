@@ -11,7 +11,7 @@ window.addEventListener('scroll'){
     console.log('surdingiz a?')
 }
 SideNowTime.addEventListener('click', function() {
-    window.location.href = "./nowTimePart/index.html";
+    window.location.href = "/main-menu/nowTimePart/index.html";
 })
 const ismi = localStorage.getItem('userName') || 'mehmon'
 const familiyasi = localStorage.getItem('userLastName') ||  'mehmon'
