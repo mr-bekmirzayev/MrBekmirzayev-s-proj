@@ -217,7 +217,7 @@ body {
     gap: 25px;
 }
 
-@media (max-width: 391px) {
+@media (max-width: 416px) {
     .animationDum {
         box-shadow: 0px 0px 15px 5px white;
         width: 222px;
