@@ -216,11 +216,28 @@ body {
     display: flex;
     gap: 25px;
 }
-
-@media (max-width: 416px) {
-    .animationDum {
+.animationDum1{
+    opacity: 0;
+}
+.animationDum1{
+    transition: 0.50s;
+    position: absolute;
+    clip-path: inset(85px 0px 80px 0px round 220px);
+}
+@media (max-width: 431px) {
+    .animationDum1 {
         box-shadow: 0px 0px 15px 5px white;
         width: 222px;
+    }
+    .friendNums>h2{
+        text-shadow: 0px 0px 10px black;
+    }
+    .FullScreenbtn{
+        display: none;
+    }
+
+    .animationDum{
+        display: none;
     }
 
     .soat::before {
@@ -230,11 +247,24 @@ body {
     .bodyForAnimation {
         display: none;
     }
+    .animationDum1{
+        display: block;
+    }
+    .bodyMediaFor{
+        display: block;
+    }
 
     .friendTimes {
         font-size: 18px;
         margin-top: 25px;
         text-align: center;
+    }
+    .FullScreenbtn:hover{
+        display: none;
+    }
+    .loadingVid{
+        margin-top: 25px;
+        width: 58px;
     }
 
     .friendNums {

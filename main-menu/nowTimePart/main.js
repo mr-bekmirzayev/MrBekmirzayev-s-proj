@@ -10,6 +10,7 @@ const networks = document.querySelector(".networks");
 const myLogo = document.querySelector(".my-logo");
 let year = document.querySelector(".year");
 let month = document.querySelector(".month");
+const animationDum1 = document.querySelector(".animationDum1")
 let animationDum = document.querySelector(".animationDum");
 let day = document.querySelector(".day");
 let xabarMatni = document.querySelector('.xabarMatni')
@@ -34,6 +35,7 @@ window.onload = async function () {
   FullScreenbtn.style.opacity = "1";
   soatE.style.opacity = "1";
   animationDum.style.opacity = "1";
+  animationDum1.style.opacity = "1"
   setInterval(soatY, 20);
   soatY();
 };
