@@ -6,9 +6,12 @@ let secund = document.querySelector(".secund");
 let monthText = document.querySelector(".monthText");
 let FullScreenbtn = document.querySelector(".FullScreenbtn");
 let soatE = document.querySelector(".soat");
+let qaeXab = document.querySelector('.qaeXab')
 const networks = document.querySelector(".networks");
+let qaeXabW = document.querySelector('.qaeXabW')
 const myLogo = document.querySelector(".my-logo");
 let year = document.querySelector(".year");
+let notifP = document.querySelector(".notifacetion")
 let month = document.querySelector(".month");
 const animationDum1 = document.querySelector(".animationDum1")
 let animationDum = document.querySelector(".animationDum");
@@ -31,8 +34,8 @@ window.onload = async function () {
   textl.style.display = "none";
   loadingVideo.style.opacity = "0";
   textl.style.transition = "2s";
-  networks.style.opacity = "1";
   FullScreenbtn.style.opacity = "1";
+  FullScreenbtn.style.pointerEvents = "All";
   soatE.style.opacity = "1";
   animationDum.style.opacity = "1";
   animationDum1.style.opacity = "1"
@@ -49,7 +52,9 @@ FullScreenbtn.addEventListener("click", function () {
     document.exitFullscreen();
   }
 });
-
+setTimeout(() => {
+  notifP.style.opacity = "1"
+}, 7000);
 function soatY() {
   let data = new Date();
 
@@ -79,3 +84,34 @@ function soatY() {
   day.textContent = dy + ".";
   let joriyOyIndex = data.getMonth();   
 }
+
+FullScreenbtn.addEventListener('mouseenter', function(){
+  notifP.classList.add('notifacetionhoverB')
+  qaeXab.textContent = 'Xa, xuddi shu yer. bosing!'
+  qaeXab.style.display = 'block'
+  qaeXab.style.color = 'black'
+  qaeXab.style.textContent = 'center'
+  qaeXab.style.opacity = '1'
+})
+FullScreenbtn.addEventListener('mouseleave', function(){
+  notifP.style.background = "white"
+  qaeXab.style.display = 'none'
+  qaeXab.style.opacity = '0'
+  notifP.classList.toggle('notifacetionhoverB')
+})
+FullScreenbtn.addEventListener('click', function(){
+  notifP.style.opacity = "0"
+  qaeXabW.textContent = "ee gap yo'q!"
+  qaeXabW.style.opacity = '1'
+  qaeXab.style.display = 'block'
+})
+if(document.fullscreenElement){
+  notifP.style.opacity = '0'
+  notifP.style.display = 'none'
+}else {
+  notifP.style.display = "block"
+  notifP.style.opacity = "1"
+}
+window.addEventListener('online', function() {
+  console.log('internetga ulaning iltimos')
+})

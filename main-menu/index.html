@@ -1,33 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MB</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
-    <video autoplay loop muted playsinline id="bg-video">
-        <source src="./animation/background.mp4" type="video/mp4">
+    <video style="filter: blur(5px);" autoplay loop muted playsinline id="bg-video">
+        <source src="./animation/redBorderAnimation.mp4" type="video/mp4">
     </video>
     <!-- <video autoplay loop muted playsinline class="backgroundAnim">
         <source src="./animation/.mp4" type="video/mp4">
     </video> -->
+    <header>
+        <div class="foydali">
+            <a href="">
+                <button class="foydaliBBtn">Foydali Bo'lim <i class="fa-solid fa-burst"></i></button>
+            </a>
+            <a target="_blank" href="https://t.me/MrBekmirzayev">
+                <button class="networks">Telegram kanalimiz <i class="fa-brands fa-telegram"></i></button>
+            </a>
+            <a style="text-decoration: none;" target="_blank" href="https://t.me/Mr_Bekmirzayev">
+                <button class="networks">Murojaat <i class="fa-solid fa-bolt"></i></button>
+            </a>
+        </div>
+        <ul class="headerList">
+            <li class="SideProfile"><i class="fa-solid fa-circle-user"></i> Profil</li>
+            <li class="SideSettings"><i class="fa-solid fa-gear"></i> Sozlamalar</li>
+            <li class="SideNowTime"><i class="fa-solid fa-clock"></i> Hozirgi Vaqt</li>
+        </ul>
+        <div class="hiPart">
+        </div>
+    </header>
     <aside class="sideBar">
+        <button class="closeSideBar"><i class="fa-solid fa-angle-left"></i></button>
         <div class="inf">
         </div>
         <!-- <i class="fa-solid fa-bars"></i> -->
-        <h2 class="SideProfile"><i class="fa-solid fa-circle-user"></i>profil</h2>
-        <h2 class="SideSettings"><i class="fa-solid fa-gear"></i>Sozlamalar</h2>
-        <h2 class="SideNowTime"><i class="fa-solid fa-clock"></i>Hozirgi Vaqt</h2>
+        <h2 class="SideProfile SideAction"><i class="fa-solid fa-circle-user sideIcon"></i><span
+                class="sideActionsTxt">profil</span></h2>
+        <h2 class="SideSettings SideAction"><i class="fa-solid fa-gear sideIcon"></i><span
+                class="sideActionsTxt">Sozlamalar</span></h2>
+        <h2 class="SideNowTime SideAction"><i class="fa-solid fa-clock sideIcon"></i><span
+                class="sideActionsTxt">Hozirgi Vaqt</span></h2>
     </aside>
-    <h2 class="textName" style="color: blue;"></h2>
-    <h2 class="textEmail" style="color: white;"></h2>
-    <h2 class="textLastName" style="color: red;"></h2>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./main.js"></script>
 </body>
+
 </html>
