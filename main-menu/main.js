@@ -6,6 +6,8 @@ let sideInf = document.querySelector(".inf");
 let hiPart = document.querySelector('.hiPart')
 const sideBar = document.querySelector(".sideBar");
 const SideAction = document.querySelectorAll(".SideAction");
+let headerList = document.querySelector('.headerList')
+const header = document.querySelector('header')
 let SideProfile = document.querySelector(".SideProfile");
 let orabTuruvchi = document.querySelector(".orabTuruvchi");
 let sideIcons = document.querySelector(".sideIcon");
@@ -33,6 +35,13 @@ sideInf.innerHTML += `
     </div>
     
     `;
+    window.addEventListener('scroll', function() {
+      if(this.window.scrollY > 12){
+        header.classList.add('stickyHe')
+      }else {
+        header.classList.remove('stickyHe')
+      }
+    })
 let profImg = document.querySelector(".profImg");
 let profinf = document.querySelectorAll(".profinf");
 closeSideBar.addEventListener("click", function () {

@@ -58,6 +58,7 @@ form.addEventListener("submit", (e) => {
 emailInpElement.addEventListener("input", function () {
   const emailVal = emailInpElement.value;
 
+
   if (emailVal === " ") {
     emailInpElement.style.border = "solid 1.5px red";
     emailInpElement.style.boxShadow = "0px 0px 10px 5px red";
